@@ -1,18 +1,51 @@
-let counter=0;
-//metto fuori dalla funzione in modo che quando aggiorno la pagina il counter sarà a 0
-function add(){
-counter++;             //per aumentare di 1,ogni volta che premo il pusante +, il counter incrementa di 1
-document.getElementById("number").innerHTML= counter; 
+// button -
+
+const subBtn=document.createElement('button');  
+subBtn.innerText='-';
+buttons.appendChild(subBtn);
+// button +
+
+const addBtn=document.createElement('button'); 
+addBtn.innerText="+";
+const btnContainer= document.getElementById('buttons');
+buttons.appendChild(addBtn);
+
+//reset button
+const resetBtn=document.createElement('button');
+resetBtn.innerText='reset';
+buttons.appendChild(resetBtn);
+
+//  counter button 
+ const counterBtn= document.createElement('div');
+ counterBtn.innerText='0';
+ const container = document.getElementById('container');
+ container.appendChild(counterBtn);
+
+
+//script
+
+ let numberValue=0;
+ addBtn.addEventListener('click',function(){  //per aumentare di 1,ogni volta che premo il pulsante +
+     numberValue++
+     let add=counterBtn.innerText=numberValue;
+ }
+ 
+ )
+ subBtn.addEventListener('click',function(){  //per diminuire di 1,ogni volta che premo il pusante -
+    numberValue--
+    let sub=counterBtn.innerText=numberValue;
+    
+    
+   
+   
+})
+
+resetBtn.addEventListener('click',function(){
+    numberValue=0;
+    let sub=counterBtn.innerText=numberValue;
 }
 
-function subtract(){ //per diminuire di 1,ogni volta che premo il pulsante -
-   
-if (counter !=0) { //uso questo per evitare che il counter vada sotto lo 0;(se il contatore è diverso da zero in questo caso puoi dimnuire,se è zero no!)
-    counter--;
-}
-document.getElementById("number").innerHTML= counter;
-   
-}   
+)
 
 
                        
